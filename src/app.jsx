@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import dayjs from "dayjs";
+import { HashRouter as Router, Route, Routes } from "react-router-dom"; // Use HashRouter
 import "./app.css";
 
 function App() {
@@ -36,27 +37,29 @@ function App() {
   }, [targetDate]);
 
   return (
-    <div className="App">
-      <h1>Countdown to Inauguration Day 2029</h1>
-      <div className="countdown">
-        <div className="countdown-item">
-          <span className="countdown-number">{countdown.days}</span>
-          <span className="countdown-label">Days</span>
-        </div>
-        <div className="countdown-item">
-          <span className="countdown-number">{countdown.hours}</span>
-          <span className="countdown-label">Hours</span>
-        </div>
-        <div className="countdown-item">
-          <span className="countdown-number">{countdown.minutes}</span>
-          <span className="countdown-label">Minutes</span>
-        </div>
-        <div className="countdown-item">
-          <span className="countdown-number">{countdown.seconds}</span>
-          <span className="countdown-label">Seconds</span>
+    <Router>
+      <div className="App">
+        <h1>Countdown to Inauguration Day 2029</h1>
+        <div className="countdown">
+          <div className="countdown-item">
+            <span className="countdown-number">{countdown.days}</span>
+            <span className="countdown-label">Days</span>
+          </div>
+          <div className="countdown-item">
+            <span className="countdown-number">{countdown.hours}</span>
+            <span className="countdown-label">Hours</span>
+          </div>
+          <div className="countdown-item">
+            <span className="countdown-number">{countdown.minutes}</span>
+            <span className="countdown-label">Minutes</span>
+          </div>
+          <div className="countdown-item">
+            <span className="countdown-number">{countdown.seconds}</span>
+            <span className="countdown-label">Seconds</span>
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
