@@ -3,9 +3,12 @@
   "version": "0.0.5",
   "description": "A simple React single page app, built with Vite and React.",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build", // Build the app before deploying
+    "deploy": "gh-pages -d build" // Deploy the build folder
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.0.3",
